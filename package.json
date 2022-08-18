@@ -1,16 +1,35 @@
 {
-  "name": "ezon",
+  "name": "e-zon",
+  "type": "module",
   "version": "1.0.0",
+  "description": "Ecommerce website like amazon",
   "main": "index.js",
   "scripts": {
-    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
-    "start": "node backend/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cd frontend && npm install && npm run build",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basir/mern-amazona.git"
+    "url": "git+https://github.com/iamkeetarp/E-Zon.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  
+  "homepage": "https://github.com/iamkeetarp/E-Zon#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-plugin-react": "^7.21.2",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^6.0.13",
+    "multer": "^1.4.3",
+    "socket.io": "^4.4.0"
+  }
 }
